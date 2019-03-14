@@ -32,7 +32,7 @@ function DadosAmbientais() {
     }
 
     dados()
-    setInterval(dados, 100000)
+    setInterval(dados, 7200000 )
 
     return dados
 }
