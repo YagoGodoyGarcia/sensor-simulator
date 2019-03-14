@@ -1,0 +1,30 @@
+{
+  "name": "Plantem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.11.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chokidar": "^2.1.2",
+    "compression": "^1.7.3",
+    "config": "^3.0.1",
+    "exports": "0.0.1",
+    "express": "^4.16.4",
+    "form-data": "^2.3.3",
+    "helmet": "^3.15.0",
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
