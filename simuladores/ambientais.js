@@ -30,7 +30,7 @@ function DadosAmbientais() {
         ModuloHTTP(schema, data)
     }
     dados()
-    setInterval(dados, 1000)
+    setInterval(dados, 300000)
 }
 
 exports.DadosAmbientais = DadosAmbientais

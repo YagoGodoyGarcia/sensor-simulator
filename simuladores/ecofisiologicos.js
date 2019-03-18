@@ -21,7 +21,7 @@ function DadosEcofisiologicos() {
     }
 
     dados()
-    setInterval(dados, 1000)
+    setInterval(dados, 300000)
 }
 
 exports.DadosEcofisiologicos = DadosEcofisiologicos
