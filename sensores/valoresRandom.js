@@ -1,4 +1,4 @@
-function ValoresFloat(min, max) {
+function ValoresFloat(min, max, decimal) {
 
     var random = Math.random() * (max - min + 1) + min
     var value = parseFloat(random.toExponential(2))
