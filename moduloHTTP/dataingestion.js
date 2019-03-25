@@ -6,7 +6,7 @@ function ModuloHTTP(schema, dados) {
     request.post({
         headers: {
             'X-Schema': schema,
-            'apikey': 'PVzr2NNZFx80ssqxkDeMb4DSzf9866HS',
+            'apikey': 'Zglk95DUV5O1vhUQl7N80eczWt273Oin',
             'Content-Type': 'application/json'
         },
         url: 'https://portal.stg.eugenio.io/api/v1/data',

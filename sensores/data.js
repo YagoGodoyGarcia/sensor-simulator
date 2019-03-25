@@ -10,6 +10,12 @@ function GerarData() {
     var minAtual = data.getMinutes()        // 0-59
     var segAtual = data.getSeconds()
 
+    if(mesAtual+1 > 9){
+        mesAtual = mesAtual
+    }else{
+        mesAtual = "0"+(mesAtual+1)
+    }
+
     var newData = new Object({
         ano: anoAtual,
         mes: mesAtual,
