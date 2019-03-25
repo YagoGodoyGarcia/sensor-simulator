@@ -1,9 +1,11 @@
-const { ValoresFloat, ValoresInt } = require('../sensores/valoresRandom')
+const { ValoresFloat } = require('../sensores/valoresRandom')
 const { ModuloHTTP } = require('../moduloHTTP/dataingestion')
+const { GerarData } = require('../sensores/data')
 
 function DadosAmbientais() {
     const dados = () => {
-        let data = []
+        let dados = []
+        var data = GerarData()
 
         let newDados1 = new Object({
             logger_id: '200',
@@ -11,7 +13,9 @@ function DadosAmbientais() {
             ponto: 1,
             intensidade_luminosa: ValoresFloat(0, 134, 3),
             temp_inter: ValoresFloat(22.38, 28.93, 3),
-            temp_ambiente: ValoresFloat(20, 23, 3)
+            temp_ambiente: ValoresFloat(20, 23, 3),
+            data: data.dia + "/" + data.mes + "/" + data.ano,
+            hora: data.hora + ":" + data.min + ":" + data.seg
         })
 
         let newDados2 = new Object({
@@ -20,14 +24,16 @@ function DadosAmbientais() {
             ponto: 2,
             intensidade_luminosa: ValoresFloat(0, 134, 3),
             temp_inter: ValoresFloat(22.38, 28.93, 3),
-            temp_ambiente: ValoresFloat(20, 23, 3)
+            temp_ambiente: ValoresFloat(20, 23, 3),
+            data: data.dia + "/" + data.mes + "/" + data.ano,
+            hora: data.hora + ":" + data.min + ":" + data.seg
         })
-        
 
-        data = [...data, newDados1]
-        data = [...data, newDados2]
-        var schema = 'ambientais_v2'
-        ModuloHTTP(schema, data)
+
+        dados = [...dados, newDados1]
+        dados = [...dados, newDados2]
+        var schema = 'ambientais_v3'
+        ModuloHTTP(schema, dados)
     }
     dados()
     setInterval(dados, 300000)

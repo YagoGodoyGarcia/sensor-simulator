@@ -1,4 +1,5 @@
 const { ValoresFloat } = require('../sensores/valoresRandom')
+const { GerarData } = require('../sensores/data')
 
 function NewEco(tratamento, hibrido) {
     var bateria = ValoresFloat(4.1, 4.9, 3)
@@ -9,6 +10,7 @@ function NewEco(tratamento, hibrido) {
     var balanca = 18.525
     var temp_inter = ValoresFloat(22.38, 28.93, 3)
     var logger_id = '200'
+    var data = GerarData()
 
     var newDados = new Object({
         tratamento: tratamento,
@@ -22,6 +24,8 @@ function NewEco(tratamento, hibrido) {
         temp_inter: temp_inter,
         logger_id: logger_id,
         temp_inter: temp_inter,
+        data: data.dia+"/"+data.mes+"/"+data.ano,
+        hora: data.hora+":"+data.min+":"+data.seg
     })
 
     return newDados
